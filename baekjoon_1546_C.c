@@ -1,9 +1,9 @@
 #include <stdio.h> 
 main(void)
 {
-	unsigned char M = 0;
-	unsigned char score;
-	unsigned int N,sum=0;
+	unsigned int M = 0;
+	unsigned int score;
+	unsigned int N, sum = 0;
 
 	scanf("%d", &N);
 	for (unsigned int i = 0; i < N; i++) {
@@ -12,6 +12,6 @@ main(void)
 			M = score;
 		sum += score;
 	}
-	printf("%.2f", (float)sum / ((unsigned int)M*N) * 100);
+	printf("%.2f", (float)sum / (M*N) * 100);
 	return 0;
 }
