@@ -1,13 +1,9 @@
-#include <stdio.h> 
+# include <stdio.h>
+int main() {
+	int n,cnt=2;
+	scanf("%d", &n);
+	for (int i = 0; i < n; i++) cnt += cnt - 1;
+		printf("%d\n", cnt*cnt);
 
-int main(void)
-{
-	unsigned long long side = 2;
-	unsigned int N;
-	scanf("%d", &N);
-	for (char i = 0; i < N; i++) {
-		side = 2 * side--;
-	}
-	printf("%lld", side*side);
 	return 0;
 }
