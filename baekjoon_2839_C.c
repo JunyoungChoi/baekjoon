@@ -1,5 +1,4 @@
 #include <stdio.h> 
-#include <math.h>
 main(void)
 {
 	int three, five, N;
@@ -7,11 +6,11 @@ main(void)
 	five = N / 5;
 	if (N == 4 || N == 7)
 		printf("-1");
-	else if (N%5 == 0) {
+	else if (N % 5 == 0) {
 		printf("%d", five);
 	}
 	else {
-		int temp = N%5;
+		int temp = N % 5;
 		while (1) {
 			if (temp % 3 == 0) {
 				three = temp / 3;
@@ -21,7 +20,7 @@ main(void)
 				temp += 5;
 				five--;
 			}
-			
+
 		}
 		printf("%d", five + three);
 	}
