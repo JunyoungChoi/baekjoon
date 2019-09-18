@@ -1,27 +1,30 @@
 N= int(input())
 stack = []
 stack_size = 0
+answer=''
 for i in range(N):
     order = input()
     if 'push' in order:
-        stack.append(int(order[5:]))
+        t=order.split()
+        stack.append(int(t[1]))
         stack_size +=1
     elif 'pop' in order :
-        if stack_size is 0:
-            print(-1)
+        if stack_size == 0:
+            answer+='-1\n'
         else:
-            print(stack[stack_size-1])
-            del stack[stack_size-1]
+            answer+=str(stack[-1])+'\n'
+            del stack[-1]
             stack_size -=1
     elif 'size' in order:
-        print(stack_size)
+        answer+=str(stack_size)+'\n'
     elif 'empty' in order :
-        if stack_size is 0 :
-            print(1)
+        if stack_size == 0 :
+            answer+='1\n'
         else:
-            print(0)
+            answer+='0\n'
     elif 'top' in order :
-        if stack_size is 0 :
-            print(-1)
+        if stack_size == 0 :
+            answer+='-1\n'
         else:
-            print(stack[stack_size-1])
+            answer+=str(stack[-1])+'\n'
+print(answer[:-1])
